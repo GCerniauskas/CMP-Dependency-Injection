@@ -24,9 +24,9 @@ fun App() {
     MaterialTheme {
         KoinContext {
             val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "home") {
+            NavHost(navController = navController, startDestination = HomePage) {
 
-                composable("home") {
+                composable<HomePage> {
                     val viewModel = koinViewModel<MyViewModel>()
                     Box(
                         modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center
@@ -38,3 +38,6 @@ fun App() {
         }
     }
 }
+
+@Serializable
+object HomePage

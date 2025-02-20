@@ -59,7 +59,7 @@ kotlin {
 
             // Navigation e ViewModel
             implementation(libs.lifecycle.viewmodel)
-            implementation(libs.navigation.compose)
+            implementation(libs.jetbrains.compose.navigation)
             implementation(libs.kotlinx.serialization.json)
         }
         desktopMain.dependencies {
